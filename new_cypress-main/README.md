@@ -3,30 +3,31 @@
 > **Статус проекта:**
 > Публичный проект: https://login.qa.studio/
 > 
-> 🟢 Поддерживается (активный) 
 
 ## Описание проекта и задачи
 Автоматизировать часть проверок регресса с помощью Cypress
 
-## Тест-кейсы, которые автоматизировали
-* Авторизация с верным паролем и верным логином
-* Авторизация c верным логином и неверным паролем
-* Проверка работы валиадации на наличие @ в логине
-* Проверка флоу восстановления пароля
+## Тест-кейсы, которые автоматизировал
+* Валидация на наличие @ в логине
+* Приведение логина к нижнему регистру и успешная авторизация
+* Кейс на проверку логина и пароля
+* Кейс на восстановление пароля
+* Кейс на проверку верного логина и неверного пароля
+* Кейс на проверку неверного логина и верного пароля
 
 ## Детали реализации
 
 1. baseUrl вынесен в переменные конфига
-![image](https://raw.githubusercontent.com/German-D/new_cypress/main/static/baseUrl.png)
+![image](https://raw.githubusercontent.com/S-Sergey-YU/cypress.js/refs/heads/main/new_cypress-main/baseUrl.png)
 
 2. Применение хуков beforeEach и afterEach
-![image](https://raw.githubusercontent.com/German-D/new_cypress/main/static/hooks.png)
+![image](https://raw.githubusercontent.com/S-Sergey-YU/cypress.js/refs/heads/main/new_cypress-main/beforeEach_afterEach.png)
 
 3. Переменные данные для авторизации вынесены в отдельный файл
-![image](https://raw.githubusercontent.com/German-D/new_cypress/main/static/user_data.png)
+![image](https://raw.githubusercontent.com/S-Sergey-YU/cypress.js/refs/heads/main/new_cypress-main/Variables.png)
 
 4. Каждая страница описана в формате объекта с локаторами
-![image](https://raw.githubusercontent.com/German-D/new_cypress/main/static/locators.png)
+![image](https://raw.githubusercontent.com/S-Sergey-YU/cypress.js/refs/heads/main/new_cypress-main/locators.png)
 
 ## Локальный запуск тестов (из терминала)
 1. Скачать проект
@@ -36,8 +37,6 @@
 npx cypress run --spec cypress/e2e/lesson_locators.cy.js --browser chrome
 ```
 Ожидаемый результат: получим отчет о прохождении тестов.
-![image](https://raw.githubusercontent.com/German-D/new_cypress/main/static/Cypress_cli.png)
-
 
 ## Локальный запуск через Cypress UI
 1. Скачать проект и открыть в терминале.
@@ -49,9 +48,7 @@ npx cypress run --spec cypress/e2e/lesson_locators.cy.js --browser chrome
 7. Выбрать спеку lesson_locators
 
 Ожидаемый результат: получим отчет о прохождении тестов.
-![image](https://raw.githubusercontent.com/German-D/new_cypress/main/static/Cypress_UI.png)
-
 
 ## Автор
 
-Герман Дольников ([@dolnikov](https://t.me/dolnikov))
+Сергей Садухин ([@Sergey_S_Y](https://t.me/Sergey_S_Y))
